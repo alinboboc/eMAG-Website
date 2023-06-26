@@ -1,0 +1,149 @@
+:root {
+  --blue: #0082e6;
+  --white: #fff;
+  --grey: #808080;
+  --transparentBlue: #0082e610;
+  --black: #000;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+/* Navigation */
+
+.navigationElements,
+.auxiliaryNavigationElements {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  justify-content: center;
+  max-width: 1520px;
+  margin: auto;
+}
+
+.navigationSearch,
+.navigationButtons {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.emagLogo img {
+  height: 36px;
+}
+
+.navigationSearch {
+  height: 35px;
+  padding: 0 10px;
+  width: 925px;
+}
+
+.navigationSearch input {
+  border-bottom-left-radius: 20px;
+  border-bottom: 1px solid var(--blue);
+  border-left: 1px solid var(--blue);
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-top: 1px solid var(--blue);
+  height: 35px;
+  text-indent: 10px;
+  width: 900px;
+}
+
+.navigationSearch input::placeholder {
+  color: var(--grey);
+}
+
+.navigationSearch button {
+  background-color: #fff;
+  border-bottom-right-radius: 20px;
+  border-bottom: 1px solid var(--blue);
+  border-left: none;
+  border-right: 1px solid var(--blue);
+  border-top-right-radius: 20px;
+  border-top: 1px solid var(--blue);
+  height: 35px;
+  padding: 0 10px;
+  outline: none;
+}
+
+.navigationSearch button:hover {
+  background-color: var(--transparentBlue);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.fa-magnifying-glass,
+.fa-user,
+.fa-heart,
+.fa-opencart {
+  color: var(--blue);
+}
+
+.navigationButtons > div {
+  margin: 0 10px;
+}
+
+.navigationButtons a {
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+.fa-caret-down,
+.fa-bars {
+  padding: 0 5px;
+}
+
+/* Auxiliary navigation */
+
+.auxiliaryNavigation {
+  background: rgb(255, 29, 37);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 29, 37, 1) 0%,
+    rgba(0, 130, 230, 1) 80%
+  );
+}
+
+.auxiliaryNavigationElements {
+  justify-content: flex-start;
+  height: 40px;
+}
+
+.auxiliaryNavigationElements a {
+  font-size: 12px;
+  color: var(--white);
+  background-color: transparent;
+  padding: 4px 10px;
+  border: 1px;
+  margin: 5px 0 5px 4px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: transparent 1px solid;
+}
+
+.auxiliaryNavigationElements a:first-child {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--white);
+  color: var(--black);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 0;
+  padding-bottom: 11px;
+}
+
+.auxiliaryNavigationElements a:not(:first-child):hover {
+  border-color: var(--white);
+  border-radius: 20px;
+}
