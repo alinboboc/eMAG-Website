@@ -2,17 +2,30 @@
   --blue: #0082e6;
   --white: #fff;
   --grey: #808080;
+  --lightGrey: #dedede;
   --transparentBlue: #0082e610;
   --black: #000;
+  --greyBackground: #f2f2f7;
+  --asideWhite: #fdfdfd;
 }
+
 * {
   box-sizing: border-box;
 }
+
 body {
-  background-color: #fff;
+  background-color: var(--greyBackground);
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42;
+}
+
+nav {
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Navigation */
@@ -95,7 +108,6 @@ input:focus {
 }
 
 .navigationButtons a {
-  text-decoration: none;
   padding: 0 5px;
 }
 
@@ -107,6 +119,7 @@ input:focus {
 /* Auxiliary navigation */
 
 .auxiliaryNavigation {
+  height: 40px;
   background: rgb(255, 29, 37);
   background: linear-gradient(
     90deg,
@@ -116,23 +129,29 @@ input:focus {
 }
 
 .auxiliaryNavigationElements {
-  justify-content: flex-start;
-  height: 40px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.auxiliaryNavigationElements a {
+.auxiliaryNavigationElementsLeft,
+.auxiliaryNavigationElementsRight {
+  height: 38px;
+  margin: 0, 20px;
+}
+
+.auxiliaryNavigationElementsLeft a,
+.auxiliaryNavigationElementsRight a {
   font-size: 12px;
   color: var(--white);
   background-color: transparent;
-  padding: 4px 10px;
+  padding: 6px 10px;
   border: 1px;
   margin: 5px 0 5px 4px;
-  text-decoration: none;
   box-sizing: border-box;
   border: transparent 1px solid;
 }
 
-.auxiliaryNavigationElements a:first-child {
+.auxiliaryNavigationElementsLeft a:first-child {
   font-size: 14px;
   font-weight: 600;
   background-color: var(--white);
@@ -140,12 +159,152 @@ input:focus {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: 0;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
 }
 
-.auxiliaryNavigationElements a:not(:first-child):hover {
+.auxiliaryNavigationElementsLeft a:not(:first-child):hover,
+.auxiliaryNavigationElementsRight a:hover {
   border-color: var(--white);
   border-radius: 20px;
 }
 
-/* /test */
+.fa-headset {
+  padding-right: 10px;
+}
+
+.auxiliaryNavigationElementsRight {
+  margin-right: 20px;
+}
+
+.auxiliaryNavigationElementsLeft {
+  margin-left: 10px;
+}
+
+/* Aside menu */
+.container {
+  max-width: 1520px;
+  margin: auto;
+}
+
+aside {
+  margin-top: -3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 14px;
+  box-shadow: -1px 0px 2px 0px rgba(0, 0, 0, 0.09);
+}
+
+aside a {
+  width: 240px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--black);
+  background-color: var(--asideWhite);
+  padding-left: 5px;
+}
+
+aside a:hover {
+  border-top: 1px solid var(--greyBackground);
+  border-bottom: 1px solid var(--greyBackground);
+}
+
+aside a i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  width: 40px;
+}
+
+.asideHero {
+  display: flex;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+/* Offer cards */
+
+.offerCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1520px;
+  margin: 20px 15px;
+  padding: 7px 0;
+}
+.offerCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 220px;
+  border: 1px solid var(--lightGrey);
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.offerCardContent {
+  position: relative;
+  width: 180px;
+  height: 210px;
+  border: 1px solid var(--lightGrey);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.offerCardContent img {
+  width: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.offerCardContent p {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin: 0;
+  padding: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  z-index: 2;
+}
+
+.fa-location-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  background-color: var(--white);
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  padding-top: 2px;
+  padding-right: 1px;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  float: left;
+}
+
+.slideshow-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0),
+    hsla(0, 0%, 0%, 0.407)
+  );
+  z-index: 1;
+}
