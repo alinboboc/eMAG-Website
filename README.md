@@ -15,3 +15,8 @@ The project is based on the website look from 26.06.2023, actualisations will no
 - added aside menu (need to add box shadow on the bottom)
 - added hero image next to aside
 - added offer cards
+
+//28.06.2023
+
+- added product recomandations cards
+- implemented genius tag, crazy days tag, top favorite tag etc
