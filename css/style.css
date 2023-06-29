@@ -490,3 +490,133 @@ h2 {
   bottom: 10px;
   right: 10px;
 }
+
+/* news cards */
+
+.news,
+.newsletter,
+.newsletterInput,
+.marketplace {
+  margin: 20px 15px;
+}
+
+.newsCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.newsCards img {
+  border-radius: 10px;
+}
+
+/* newsletter */
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  margin-top: 70px;
+  height: 240px;
+  width: 1500px;
+  background-image: linear-gradient(
+    to right,
+    #ff1d25 5%,
+    #a0328c 35%,
+    #7040a4 45%,
+    #4359c7 55%,
+    #0082e6 70%
+  );
+}
+
+.newsletter img {
+  margin: 0;
+  margin-top: -21.5px;
+}
+
+.newsletterContent {
+  padding-left: 70px;
+}
+
+.newsletterTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.newsletterST {
+  font-size: 11.9px;
+}
+
+.newsletterInput {
+  padding: 20px 0;
+}
+
+.newsletterInput input {
+  width: 300px;
+  height: 32px;
+  border-radius: 18px;
+  border: none;
+  text-indent: 10px;
+  margin-right: 15px;
+}
+
+.newsletterInput input::placeholder {
+  margin: 7px 12px;
+}
+
+.newsletterInput button {
+  width: 325px;
+  height: 32px;
+  border-radius: 18px;
+  background-color: var(--priceColor);
+  color: var(--white);
+  border: 0;
+}
+
+.marketplace {
+  background-color: #005bc3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+}
+
+.marketplaceaContent {
+  padding: 40px 20px;
+}
+
+.marketplaceaContent img {
+  width: 260px;
+}
+
+.marketplaceTitle {
+  font-size: 32px;
+  margin: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.marketplaceaContent button {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  width: 315px;
+  height: 38px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid var(--priceColor);
+  border-radius: 40px;
+}
+
+.marketplaceaContent button:hover {
+  color: var(--priceColor);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+}

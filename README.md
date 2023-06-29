@@ -20,3 +20,8 @@ The project is based on the website look from 26.06.2023, actualisations will no
 
 - added product recomandations cards
 - implemented genius tag, crazy days tag, top favorite tag etc
+
+//29.06.2023
+
+- added newsletter area
+- added marketplace area
